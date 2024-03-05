@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    let checkList: [any JailbreakCheckContents] = [
+        PathChecker(),
+        FileChecker(),
+        SandboxChecker(),
+        SystemAPICallChecker(),
+        LibraryInjectionChecker()
+    ]
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(checkList, id: \.contentsTitle) { content in
+                NavigationLink {
+                    CheckResultView(result: content.checkMethod())
+                        .navigationTitle(content.contentsTitle)
+                } label: {
+                    Text(content.contentsTitle)
+                }
+            }
+            .navigationTitle("JailbreakDetector")
         }
-        .padding()
     }
 }
 

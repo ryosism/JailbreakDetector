@@ -14,6 +14,13 @@
 		203F1A512B5299750069C4D6 /* JailbreakDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A502B5299750069C4D6 /* JailbreakDetectorTests.swift */; };
 		203F1A5B2B5299750069C4D6 /* JailbreakDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A5A2B5299750069C4D6 /* JailbreakDetectorUITests.swift */; };
 		203F1A5D2B5299750069C4D6 /* JailbreakDetectorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A5C2B5299750069C4D6 /* JailbreakDetectorUITestsLaunchTests.swift */; };
+		203F1A6C2B529B9E0069C4D6 /* JailbreakCheckContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A6B2B529B9E0069C4D6 /* JailbreakCheckContents.swift */; };
+		203F1A6F2B52A0DF0069C4D6 /* PathChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A6E2B52A0DF0069C4D6 /* PathChecker.swift */; };
+		2073B34C2B88649E007B5B2C /* FileChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073B34B2B88649E007B5B2C /* FileChecker.swift */; };
+		2073B34F2B88EB41007B5B2C /* CheckResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073B34E2B88EB41007B5B2C /* CheckResultView.swift */; };
+		2073B3512B88EECF007B5B2C /* SandboxChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073B3502B88EECF007B5B2C /* SandboxChecker.swift */; };
+		2073B3532B88F012007B5B2C /* SystemAPICallChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073B3522B88F012007B5B2C /* SystemAPICallChecker.swift */; };
+		2073B3552B890A4D007B5B2C /* LibraryInjectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073B3542B890A4D007B5B2C /* LibraryInjectionChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,14 @@
 		203F1A562B5299750069C4D6 /* JailbreakDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JailbreakDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		203F1A5A2B5299750069C4D6 /* JailbreakDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetectorUITests.swift; sourceTree = "<group>"; };
 		203F1A5C2B5299750069C4D6 /* JailbreakDetectorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetectorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		203F1A6B2B529B9E0069C4D6 /* JailbreakCheckContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakCheckContents.swift; sourceTree = "<group>"; };
+		203F1A6E2B52A0DF0069C4D6 /* PathChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathChecker.swift; sourceTree = "<group>"; };
+		2073B34A2B87A339007B5B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2073B34B2B88649E007B5B2C /* FileChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileChecker.swift; sourceTree = "<group>"; };
+		2073B34E2B88EB41007B5B2C /* CheckResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckResultView.swift; sourceTree = "<group>"; };
+		2073B3502B88EECF007B5B2C /* SandboxChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxChecker.swift; sourceTree = "<group>"; };
+		2073B3522B88F012007B5B2C /* SystemAPICallChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAPICallChecker.swift; sourceTree = "<group>"; };
+		2073B3542B890A4D007B5B2C /* LibraryInjectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInjectionChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +109,10 @@
 		203F1A3E2B5299720069C4D6 /* JailbreakDetector */ = {
 			isa = PBXGroup;
 			children = (
+				2073B34D2B88EB2E007B5B2C /* Views */,
+				2073B34A2B87A339007B5B2C /* Info.plist */,
+				203F1A6D2B52A0CF0069C4D6 /* checkList */,
+				203F1A692B529B5D0069C4D6 /* entity */,
 				203F1A3F2B5299720069C4D6 /* JailbreakDetectorApp.swift */,
 				203F1A412B5299720069C4D6 /* ContentView.swift */,
 				203F1A432B5299750069C4D6 /* Assets.xcassets */,
@@ -125,6 +144,34 @@
 				203F1A5C2B5299750069C4D6 /* JailbreakDetectorUITestsLaunchTests.swift */,
 			);
 			path = JailbreakDetectorUITests;
+			sourceTree = "<group>";
+		};
+		203F1A692B529B5D0069C4D6 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				203F1A6B2B529B9E0069C4D6 /* JailbreakCheckContents.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		203F1A6D2B52A0CF0069C4D6 /* checkList */ = {
+			isa = PBXGroup;
+			children = (
+				203F1A6E2B52A0DF0069C4D6 /* PathChecker.swift */,
+				2073B34B2B88649E007B5B2C /* FileChecker.swift */,
+				2073B3502B88EECF007B5B2C /* SandboxChecker.swift */,
+				2073B3522B88F012007B5B2C /* SystemAPICallChecker.swift */,
+				2073B3542B890A4D007B5B2C /* LibraryInjectionChecker.swift */,
+			);
+			path = checkList;
+			sourceTree = "<group>";
+		};
+		2073B34D2B88EB2E007B5B2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2073B34E2B88EB41007B5B2C /* CheckResultView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2073B34F2B88EB41007B5B2C /* CheckResultView.swift in Sources */,
+				2073B3552B890A4D007B5B2C /* LibraryInjectionChecker.swift in Sources */,
+				203F1A6C2B529B9E0069C4D6 /* JailbreakCheckContents.swift in Sources */,
 				203F1A422B5299720069C4D6 /* ContentView.swift in Sources */,
+				203F1A6F2B52A0DF0069C4D6 /* PathChecker.swift in Sources */,
 				203F1A402B5299720069C4D6 /* JailbreakDetectorApp.swift in Sources */,
+				2073B3532B88F012007B5B2C /* SystemAPICallChecker.swift in Sources */,
+				2073B34C2B88649E007B5B2C /* FileChecker.swift in Sources */,
+				2073B3512B88EECF007B5B2C /* SandboxChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +479,13 @@
 				DEVELOPMENT_TEAM = WQ6E4DAU7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JailbreakDetector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +510,13 @@
 				DEVELOPMENT_TEAM = WQ6E4DAU7T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JailbreakDetector/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
