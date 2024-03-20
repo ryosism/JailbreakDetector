@@ -62,6 +62,7 @@ struct FileChecker: JailbreakCheckContents {
             "/usr/lib/libcycript.dylib",
             "/var/log/syslog",
             "/var/mobile/Library/Flex3",
+            "/var/mobile/Library/Preferences/com.s1ris.musiex.plist",
             "/var/mobile/Library/Preferences/com.tigisoftware.Filza.plist"
         ]
         if let existFile = targetFiles.first(where: { FileManager.default.fileExists(atPath: $0) }) {

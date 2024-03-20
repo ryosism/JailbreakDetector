@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2036E5582BAB34A9009910DF /* IOSSecuritySuiteChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036E5572BAB34A9009910DF /* IOSSecuritySuiteChecker.swift */; };
+		2036E5762BAB3E2E009910DF /* IOSSecuritySuite in Frameworks */ = {isa = PBXBuildFile; productRef = 2036E5752BAB3E2E009910DF /* IOSSecuritySuite */; };
 		203F1A402B5299720069C4D6 /* JailbreakDetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A3F2B5299720069C4D6 /* JailbreakDetectorApp.swift */; };
 		203F1A422B5299720069C4D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F1A412B5299720069C4D6 /* ContentView.swift */; };
 		203F1A442B5299750069C4D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203F1A432B5299750069C4D6 /* Assets.xcassets */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2036E5572BAB34A9009910DF /* IOSSecuritySuiteChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSSecuritySuiteChecker.swift; sourceTree = "<group>"; };
 		203F1A3C2B5299720069C4D6 /* JailbreakDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JailbreakDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		203F1A3F2B5299720069C4D6 /* JailbreakDetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JailbreakDetectorApp.swift; sourceTree = "<group>"; };
 		203F1A412B5299720069C4D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2036E5762BAB3E2E009910DF /* IOSSecuritySuite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +166,7 @@
 				2073B3502B88EECF007B5B2C /* SandboxChecker.swift */,
 				2073B3522B88F012007B5B2C /* SystemAPICallChecker.swift */,
 				2073B3542B890A4D007B5B2C /* LibraryInjectionChecker.swift */,
+				2036E5572BAB34A9009910DF /* IOSSecuritySuiteChecker.swift */,
 			);
 			path = checkList;
 			sourceTree = "<group>";
@@ -190,6 +195,9 @@
 			dependencies = (
 			);
 			name = JailbreakDetector;
+			packageProductDependencies = (
+				2036E5752BAB3E2E009910DF /* IOSSecuritySuite */,
+			);
 			productName = JailbreakDetector;
 			productReference = 203F1A3C2B5299720069C4D6 /* JailbreakDetector.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 203F1A332B5299720069C4D6;
+			packageReferences = (
+				2036E5542BAB3472009910DF /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */,
+			);
 			productRefGroup = 203F1A3D2B5299720069C4D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,6 +323,7 @@
 				203F1A402B5299720069C4D6 /* JailbreakDetectorApp.swift in Sources */,
 				2073B3532B88F012007B5B2C /* SystemAPICallChecker.swift in Sources */,
 				2073B34C2B88649E007B5B2C /* FileChecker.swift in Sources */,
+				2036E5582BAB34A9009910DF /* IOSSecuritySuiteChecker.swift in Sources */,
 				2073B3512B88EECF007B5B2C /* SandboxChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +492,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JailbreakDetector/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -511,6 +525,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JailbreakDetector/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -646,6 +662,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2036E5542BAB3472009910DF /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/securing/IOSSecuritySuite.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2036E5752BAB3E2E009910DF /* IOSSecuritySuite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2036E5542BAB3472009910DF /* XCRemoteSwiftPackageReference "IOSSecuritySuite" */;
+			productName = IOSSecuritySuite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 203F1A342B5299720069C4D6 /* Project object */;
 }

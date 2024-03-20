@@ -13,7 +13,8 @@ struct ContentView: View {
         FileChecker(),
         SandboxChecker(),
         SystemAPICallChecker(),
-        LibraryInjectionChecker()
+        LibraryInjectionChecker(),
+        IOSSecuritySuiteChecker()
     ]
 
     var body: some View {
